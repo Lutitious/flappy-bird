@@ -8,43 +8,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="containerWrap">
+    <div id="containerWrap" class="noselect">
         <div id="bgPipeButtons" class="noselect">
-            <button class="bg-btn" data-bg="day" title="Day Background">
-                <img src="assets/light-icon.svg" alt="Day" class="bg-icon" />
+            <button class="bg-btn noselect" data-bg="day" title="Day Background">
+                <img src="assets/light-icon.svg" alt="Day" class="bg-icon noselect" />
             </button>
-            <button class="bg-btn" data-bg="night" title="Night Background">
-                <img src="assets/dark-icon.svg" alt="Night" class="bg-icon" />
+            <button class="bg-btn noselect" data-bg="night" title="Night Background">
+                <img src="assets/dark-icon.svg" alt="Night" class="bg-icon noselect" />
             </button>
-            <button class="pipe-btn" data-pipe="green" title="Green Pipe">
-                <img src="assets/pipe-green-icon.png" alt="Green Pipe" class="pipe-icon" />
+            <button class="pipe-btn noselect" data-pipe="green" title="Green Pipe">
+                <img src="assets/pipe-green-icon.png" alt="Green Pipe" class="pipe-icon noselect" />
             </button>
-            <button class="pipe-btn" data-pipe="red" title="Red Pipe">
-                <img src="assets/pipe-red-icon.png" alt="Red Pipe" class="pipe-icon" />
+            <button class="pipe-btn noselect" data-pipe="red" title="Red Pipe">
+                <img src="assets/pipe-red-icon.png" alt="Red Pipe" class="pipe-icon noselect" />
             </button>
         </div>
-        <div id="gameContainer">
-            <div id="bird"></div>
-            <div id="pipeContainer"></div>
+        <div id="gameContainer" class="noselect">
+            <div id="bird" class="noselect"></div>
+            <div id="pipeContainer" class="noselect"></div>
             <div id="score" class="noselect"></div>
             <button id="startBtn" class="noselect"></button>
         </div>
         <div id="birdSkinButtons" class="noselect">
-            <button class="bird-skin-btn" data-skin="blue" title="Blue Bird">
-                <img src="assets/bluebird-midflap.png" alt="Blue Bird" class="bird-skin-icon" />
+            <button class="bird-skin-btn noselect" data-skin="blue" title="Blue Bird">
+                <img src="assets/bluebird-midflap.png" alt="Blue Bird" class="bird-skin-icon noselect" />
             </button>
             <button class="bird-skin-btn" data-skin="yellow" title="Yellow Bird">
-                <img src="assets/yellowbird-midflap.png" alt="Yellow Bird" class="bird-skin-icon" />
+                <img src="assets/yellowbird-midflap.png" alt="Yellow Bird" class="bird-skin-icon noselect" />
             </button>
             <button class="bird-skin-btn" data-skin="red" title="Red Bird">
-                <img src="assets/redbird-midflap.png" alt="Red Bird" class="bird-skin-icon" />
+                <img src="assets/redbird-midflap.png" alt="Red Bird" class="bird-skin-icon noselect" />
             </button>
         </div>
     </div>
-    <div id="credits">
-        <a class="credit-element" href="https://github.com/Lutitious/flappy-bird">Source</a>
-        <p class="credit-element">Game By: <a class="credit-element" href="https://github.com/Lutitious">Lutitious</a></p>
-        <p class="credit-element">Assets By: <a class="credit-element" href="https://github.com/samuelcust/flappy-bird-assets">Samuelcust</a></p>
+    <div id="credits" class="noselect">
+        <a class="credit-element noselect" href="https://github.com/Lutitious/flappy-bird">Source</a>
+        <p class="credit-element noselect">Game By: <a class="credit-element noselect" href="https://github.com/Lutitious">Lutitious</a></p>
+        <p class="credit-element noselect">Assets By: <a class="credit-element noselect" href="https://github.com/samuelcust/flappy-bird-assets">Samuelcust</a></p>
     </div>
     <script src="main.js"></script>
 </body>
