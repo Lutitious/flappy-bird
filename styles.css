@@ -190,23 +190,6 @@ body.dark {
     background: #26334d;
 }
 
-.fade-anim {
-    animation: fadeSwitch 0.4s;
-}
-@keyframes fadeSwitch {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-#gameContainer.fade-anim {
-    animation: fadeSwitch 0.4s;
-}
-#pipeContainer.fade-anim {
-    animation: fadeSwitch 0.4s;
-}
-#bird.fade-anim {
-    animation: fadeSwitch 0.4s;
-}
-
 #base {
     position: absolute;
     left: 0;
