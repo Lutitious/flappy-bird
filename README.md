@@ -1,4 +1,4 @@
-# JavaScript Test Game
+# Simple Flappy Bird Game
 
 ## Project Overview
 This project is a simple flappy bird implementation using HTML, CSS, and JavaScript. It allows users to play a game where they control a bird that must navigate through pipes without hitting them. The game includes features like changing bird skins, backgrounds, and pipe colours.
