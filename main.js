@@ -73,7 +73,8 @@ let currentBg = 'day';
 let currentPipe = 'green';
 
 let bgOffset = 0;
-const BG_SCROLL_SPEED = 0.3;
+let bsOffset = 0;
+const BG_SCROLL_SPEED = 0.5;
 
 function playSound(src) {
     const audio = new Audio(src);
@@ -301,18 +302,27 @@ window.addEventListener('resize', positionBase);
 
 function scrollBackground() {
     bgOffset += BG_SCROLL_SPEED;
+    bsOffset += PIPE_SPEED;
     gameContainer.style.backgroundPositionX = `${-bgOffset}px`;
-    base.style.backgroundPositionX = `${-bgOffset * 3}px`;
+    base.style.backgroundPositionX = `${-bsOffset}px`;
 }
 
-function backgroundLoop() {
-    if (!awaitingReset) {
-        scrollBackground();
+let lastFrameTime = 0;
+const FRAME_DURATION = 1000 / 60;
+
+function backgroundLoop(now) {
+    if (!lastFrameTime) lastFrameTime = now;
+    const delta = now - lastFrameTime;
+    if (delta >= FRAME_DURATION) {
+        if (!awaitingReset) {
+            scrollBackground();
+        }
+        lastFrameTime = now;
     }
     requestAnimationFrame(backgroundLoop);
 }
 
-backgroundLoop();
+requestAnimationFrame(backgroundLoop);
 
 function gameLoop() {
     birdVelocity += GRAVITY;
