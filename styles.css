@@ -1,0 +1,220 @@
+#containerWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    margin-top: 30px;
+}
+
+#gameContainer {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: url('assets/background-day.png') center/cover no-repeat;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+#bird {
+    position: absolute;
+    left: 60px;
+    top: 250px;
+    width: 34px;
+    height: 24px;
+    background: none;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    z-index: 2;
+    transition: width 0.1s, height 0.1s;
+}
+
+.pipe {
+    position: absolute;
+    width: 60px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    z-index: 1;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5em;
+    color: #222;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+    z-index: 3;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#birdSkinButtons {
+    position: static;
+    width: 60px;
+    margin-left: 18px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    z-index: 10;
+    height: 220px;
+    justify-content: flex-start;
+    pointer-events: auto;
+}
+
+.bird-skin-btn {
+    background: #e0e0e0;
+    border: 2px solid #888;
+    border-radius: 50%;
+    padding: 6px;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bird-skin-btn.selected, .bird-skin-btn:active {
+    background: #2196f3;
+    border-color: #1976d2;
+}
+.bird-skin-btn:hover {
+    background: #b3e5fc;
+}
+.bird-skin-icon {
+    width: 34px;
+    height: 24px;
+    display: block;
+}
+
+#bgPipeButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    margin-right: 18px;
+    margin-top: 50px;
+    width: 60px;
+    z-index: 10;
+    height: 260px;
+    justify-content: flex-start;
+    pointer-events: auto;
+}
+.bg-btn, .pipe-btn {
+    background: #e0e0e0;
+    border: 2px solid #888;
+    border-radius: 50%;
+    padding: 6px;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-btn.selected, .bg-btn:active, .pipe-btn.selected, .pipe-btn:active {
+    background: #2196f3;
+    border-color: #1976d2;
+}
+.bg-btn:hover, .pipe-btn:hover {
+    background: #b3e5fc;
+}
+.bg-icon {
+    width: 40px;
+    height: 30px;
+    display: block;
+    object-fit: cover;
+}
+.pipe-icon {
+    width: 32px;
+    height: 40px;
+    display: block;
+    object-fit: contain;
+}
+
+body {
+    text-align: center;
+}
+
+body.dark {
+    background: #181c25;
+    color: #e0e0e0;
+}
+#gameContainer.dark {
+    border-color: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+}
+#score.dark {
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px #222;
+}
+#startBtn.dark {
+    background: #333;
+    color: #fff;
+    border-color: #444;
+}
+#startBtn.dark:hover {
+    background: #444;
+}
+.bird-skin-btn.dark, .bg-btn.dark, .pipe-btn.dark {
+    background: #23272f;
+    border-color: #444;
+    color: #e0e0e0;
+}
+.bird-skin-btn.dark.selected, .bg-btn.dark.selected, .pipe-btn.dark.selected {
+    background: #1976d2;
+    border-color: #1565c0;
+}
+.bird-skin-btn.dark:hover, .bg-btn.dark:hover, .pipe-btn.dark:hover {
+    background: #26334d;
+}
+
+.fade-anim {
+    animation: fadeSwitch 0.4s;
+}
+@keyframes fadeSwitch {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+#gameContainer.fade-anim {
+    animation: fadeSwitch 0.4s;
+}
+#pipeContainer.fade-anim {
+    animation: fadeSwitch 0.4s;
+}
+#bird.fade-anim {
+    animation: fadeSwitch 0.4s;
+}
+
+#base {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 112px;
+    bottom: 0;
+    background: url('assets/base.png') repeat-x bottom left;
+    background-size: auto 112px;
+    z-index: 5;
+    pointer-events: none;
+}
